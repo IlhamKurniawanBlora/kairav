@@ -1,7 +1,5 @@
 <template>
-
-
-<!-- Include your Tailwind CSS and JS files -->
+<Navbar />
 <MenuTab />
 <slot />
 </template>

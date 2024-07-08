@@ -1,5 +1,5 @@
 <template>
-	<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24" class="text-violet-700">
+	<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24" class="text-yellow-500">
 		<g fill="none" stroke="currentColor" stroke-dasharray="4" stroke-dashoffset="4" stroke-linecap="round" stroke-linejoin="round">
 			<path d="M13 4h1.5M13 4h-1.5M13 4v1.5M13 4v-1.5">
 				<animate id="lineMdMoonTwotoneAltLoop0" fill="freeze" attributeName="stroke-dashoffset" begin="0.7s;lineMdMoonTwotoneAltLoop0.begin+6s" dur="0.4s" values="4;0" />

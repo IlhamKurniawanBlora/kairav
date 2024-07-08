@@ -1,6 +1,6 @@
 <template>
     <div>
-      <button @click="toggleMenu" class="absolute top-4 right-4 p-2 bg-yellow-400 rounded-full z-50">
+      <button @click="toggleMenu" class="absolute top-4 right-4 p-2 bg-yellow-400 rounded-full z-50 border-2">
         <IconMenu />
       </button>
   
@@ -9,7 +9,9 @@
           
           <ul class="text-4xl text-white space-y-4">
             <li v-for="(menuItem, index) in menuItems" :key="index">
-              <a :href="menuItem.route" @click="toggleMenu">{{ menuItem.name }}</a>
+              <StyleButton>
+                <a :href="menuItem.route" @click="toggleMenu" class="inline-block w-[100px]">{{ menuItem.name }}</a>
+              </StyleButton>
             </li>
           </ul>
         </div>

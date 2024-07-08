@@ -1,76 +1,121 @@
 <template>
- <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-  <div class="grid gap-10 lg:grid-cols-2">
-    <!-- Bagian Gambar -->
-    <div class="order-1 lg:order-2 flex items-center justify-center -mx-4 lg:pl-8">
-      <div class="flex flex-col items-end px-3">
-        <img
-          class="object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56"
-          src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-          alt=""
-        />
-        <img class="object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40" src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt="" />
-      </div>
-      <div class="px-3">
-        <img class="object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80" src="https://images.pexels.com/photos/3182739/pexels-photo-3182739.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500" alt="" />
-      </div>
-    </div>
-    <!-- Bagian Teks -->
-    <div class="order-2 lg:order-1 flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
-      <div class="max-w-xl mb-6">
-        <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-          Let us handle<br class="hidden md:block" />
-          your next
-          <span class="inline-block text-deep-purple-accent-400">destination</span>
-        </h2>
-        <p class="text-base text-gray-700 md:text-lg">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. explicabo.
-        </p>
-      </div>
-      <div>
-        <a href="/" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">
-          Learn more
-          <svg class="inline-block w-3 ml-2" fill="currentColor" viewBox="0 0 12 12">
-            <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z"></path>
-          </svg>
+  <MenuTab />
+
+  <div class="min-h-screen bg-neutral-light dark:bg-neutral-dark text-neutral-dark dark:text-neutral-light flex flex-wrap justify-center items-center w-full ">
+    <!-- Hero div -->
+    <div class="bg-neutral-light dark:bg-neutral-dark text-gray-800 mt-20 ">
+    <div class="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+      <!-- Gambar -->
+      <div class="relative flex items-center justify-center p-6 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 order-1 lg:order-2">
+    <!-- Div Absolute di Belakang Gambar -->
+    <div class="absolute mx-auto inset-0 items-center justify-center p-6 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 animate-float"><img src="../public/blob-hero.svg" alt="" srcset="" class="max-w-md h-auto mx-auto object-contain object-center"></div>
+    <!-- span Kiri Absolute -->
+    <span class="absolute left-0 top-0  w-24 z-10 animate-float"><img src="../public/blob-left.svg" alt="" srcset="" class="max-w-md h-auto object-contain object-center"></span>
+    <span class="absolute animate-float2 left-0 bottom-0  w-24 z-10"><img src="../public/blob-lb.svg" alt="" srcset="" class="max-w-md h-auto object-contain object-center"></span>
+    <!-- span Kanan Absolute -->
+    <span class="absolute animate-float2 right-0 bottom-0 w-24 z-10"><img src="../public/blob-right.svg" alt="" srcset="" class="max-w-sm h-auto object-contain object-center"><img src="../public/blob-lb2.svg" alt="" srcset="" class="max-w-sm h-auto object-contain object-center"></span>
+    <span class="absolute animate-float2 right-0 top-0  w-24 z-10"><img src="../public/blob-rb.svg" alt="" srcset="" class="max-w-sm h-auto object-contain object-center"></span>
+    <!-- image hero -->
+    <img src="../public/ilham-hero.png" alt="" class="relative object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+  </div>
+        <!-- Teks -->
+        <div class="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left order-2 lg:order-1 z-10 text-neutral-dark dark:text-accent-dark">
+           <!-- logo -->
+           <div class="flex lg:justify-start items-center justify-center mb-4 ">
+            <img src="../public/kairav.png" alt="Logo" class="h-10 mr-2" />
+            <h1 class="text-sm uppercase tracking-wider">kairav</h1>
+          </div>
+          <TextGradient>KAIRAV PORTFOLIO</TextGradient>
+      <p class="text-lg mb-2">ILHAM KURNIAWAN</p>
+      <p class="text-base text-gray-400">Frontend | Backend | Junior Fullstack | Speaker | AI Enthusiast | Undergraduated Student</p>
+            <p class="mt-6 mb-8 text-lg sm:mb-12">A  Fullstack developer focused on Web Development, with interests in UX/UI Design, Mobile, and AI Development.
+                <br class="hidden md:inline lg:hidden">Eager to learn new things and open to opportunities.
+            </p>
+            <div class="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row space-y-2 sm:space-y-2 md:space-y-2 lg:space-y-0 lg:space-x-2">
+   
+      <StyleButton>
+        <a href="#">
+          About Me
         </a>
-      </div>
-    </div>
-  </div>
-  <a
-      href="/"
-      aria-label="Scroll down"
-      class="flex items-center justify-center w-10 h-10 mx-auto text-gray-600 duration-300 transform border border-gray-400 rounded-full hover:text-deep-purple-accent-400 hover:border-deep-purple-accent-400 hover:shadow hover:scale-110"
-    >
-      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
-        <path d="M10.293,3.293,6,7.586,1.707,3.293A1,1,0,0,0,.293,4.707l5,5a1,1,0,0,0,1.414,0l5-5a1,1,0,1,0-1.414-1.414Z"></path>
-      </svg>
-    </a>
+      </StyleButton>
+      <StyleButton>
+        <a href="#">
+          Contact Me
+        </a>
+      </StyleButton>
 </div>
 
-    
-<div class="flex flex-wrap flex-col-reverse sm:flex-row">
-  <div class="w-full sm:w-8/12 mb-10 sm:mb-0">
-    <div class="container mx-auto h-full sm:p-10">
-      <nav class="flex px-4 justify-between items-center">
-        <div class="text-4xl font-bold">
-          Plant<span class="text-green-700">.</span>
         </div>
-        <div>
-          <img src="https://image.flaticon.com/icons/svg/497/497348.svg" alt="" class="w-8">
-        </div>
-      </nav>
-      <header class="container px-4 lg:flex mt-10 items-center h-full lg:mt-0">
-        <div class="w-full">
-          <h1 class="text-4xl lg:text-6xl font-bold">Find your <span class="text-green-700">greeny</span> stuff for your room</h1>
-          <div class="w-20 h-2 bg-green-700 my-4"></div>
-          <p class="text-xl mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae maiores neque eaque ea odit placeat, tenetur illum distinctio nulla voluptatum a corrupti beatae tempora aperiam quia id aliquam possimus aut.</p>
-          <button class="bg-green-500 text-white text-2xl font-medium px-4 py-2 rounded shadow">Learn More</button>
-        </div>
-      </header>
+        <div class="absolute top-20 left-4 md:left-20 xl:left-20 lg:left-20 text-sm text-gray-400">2024 | Copyright © KAIRAV</div>
     </div>
-  </div>
-  <img src="https://images.unsplash.com/photo-1536147116438-62679a5e01f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="Leafs" class="w-full h-48 object-cover sm:h-screen sm:w-4/12">
-</div>
+    </div>
 
+  <section class="relative flex flex-col md:flex-row items-center justify-center min-h-screen" v-for="(indexContent, index) in indexContent" :key="index">
+  <!-- Image Div -->
+  <div class="absolute inset-0 w-full h-full overflow-hidden md:relative md:w-1/2 md:h-auto" :id="indexContent.id">
+    <img src="../public/ilham02.jpg" alt="About Image" class="object-cover w-full h-full xl:min-h-screen lg:min-h-screen xl:overflow-hidden lg:overflow-hidden">
+  </div>
+  <!-- Content Div -->
+  <div :class="indexContent.class">
+    <div class="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left order-2 lg:order-1 z-10 text-neutral-dark dark:text-accent-dark items-center">
+      <TextGradient class="py-2">{{ indexContent.name }}</TextGradient>
+      <Strip />
+      <p class="mt-6 mb-8 text-lg sm:mb-12">{{ indexContent.description }}</p>
+    <div class="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row space-y-2 sm:space-y-2 md:space-y-2 lg:space-y-0 lg:space-x-2">
+      <StyleButton>
+        <a :href="indexContent.route">Learn More</a>
+      </StyleButton>
+    </div>
+
+  </div>
+  </div>
+  </section>
+
+  </div>
 </template>
+<script lang="ts" setup>
+interface IndexContent {
+    name: string;
+    description: string;
+    route: string;
+    class: string;
+    id: string;
+    img: string;
+  }
+  const indexContent = ref<IndexContent[]>([
+    {
+      name: 'Project',
+      description: '"Transforming Ideas into Reality Through Cutting-Edge Technology and Creativity"',
+      route: '/#project',
+      class: 'relative z-10 w-full p-6 md:w-1/2 md:p-12 bg-transparent',
+      id: 'project',
+      img: '@nuxt/public/ilham02.jpg',
+    },
+    {
+      name: 'Blog',
+      description: '"Exploring the World of Code, Learning New Skills, and One Insightful Post at a Time"',
+      route: '/#blog',
+      class: 'relative z-10 w-full p-6 md:w-1/2 md:p-12 md:bg-neutral-light md:dark:bg-neutral-dark sm:bg-neutral-light sm:dark:bg-neutral-dark',
+      id: 'blog',
+      img: '@nuxt/public/ilham02.jpg',
+    },
+    {
+      name: 'Gallery',
+      description: '"Exploring Our Journey Through Captivating Images"',
+      route: '/#gallery',
+      class: 'relative z-10 w-full p-6 md:w-1/2 md:p-12 bg-transparent',
+      id: 'gallery',
+      img: '@nuxt/public/ilham02.jpg',
+    },
+    {
+      name: 'About',
+      description: 'Let me tell you a bit about myself and the things that spark my curiosity.',
+      route: '/#about',
+      class: 'relative z-10 w-full p-6 md:w-1/2 md:p-12 md:bg-neutral-light md:dark:bg-neutral-dark sm:bg-neutral-light sm:dark:bg-neutral-dark',
+      id: 'about',
+      img: '@nuxt/public/ilham02.jpg',
+    },
+    // Tambahkan item menu lain jika diperlukan
+    
+  ]);
+</script>

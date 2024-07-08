@@ -1,22 +1,26 @@
 <template>
-  <nav :class="['bg-white shadow-md fixed w-full transition-all duration-300', { 'bg-opacity-90': isScrolled, 'bg-opacity-50': !isScrolled }]">
-    <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+  <nav :class="['bg-transparent fixed w-full transition-all duration-300', { 'bg-opacity-90 bg-white dark:bg-black shadow-md ': isScrolled, 'bg-opacity-50': !isScrolled }]">
+    <div class="container mx-auto px-4 py-2 flex justify-around items-center">
       <!-- Logo Section -->
       <div class="flex items-center space-x-2">
-        <span class="text-lg font-semibold">KAIRAV</span>
+        <span class="text-lg font-semibold text-slate-800 dark:text-primary-dark">KAIRAV</span>
       </div>
 
       <!-- Language Switcher Section -->
       <div class="flex items-center space-x-2">
-        <button class="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-700">EN</button>
-        <button class="px-3 py-1 bg-gray-200 text-black rounded hover:bg-gray-400">ID</button>
+        <label for="Toggle3" class="inline-flex items-center p-2 rounded-md cursor-pointer dark:text-gray-100">
+		<input id="Toggle3" type="checkbox" class="hidden peer border-2">
+		<span class="px-4 py-2 rounded-l-md dark:bg-primary-dark peer-checked:dark:bg-gray-700 bg-primary-dark peer-checked:bg-gray-200">IDN</span>
+		<span class="px-4 py-2 rounded-r-md dark:bg-gray-700 peer-checked:dark:bg-primary-dark bg-gray-200 peer-checked:bg-primary-dark">EN</span>
+	</label>
       </div>
 
       <!-- Menu Toggle Section -->
       <div class="flex items-center">
-        <FullScreenMenu />
+        <DarkModeToggle />
       </div>
     </div>
+    <FullScreenMenu/>
   </nav>
 </template>
 

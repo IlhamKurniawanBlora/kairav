@@ -4,6 +4,20 @@ export default {
   content: [],
   theme: {
     extend: {
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-3px)' },
+        },
+        float2: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-5px)' },
+        },
+      },
+      animation: {
+        float: 'float 3s ease-in-out infinite',
+        float2: 'float2 4s ease-in-out infinite',
+      },
       colors: {
         primary: {
           light: '#fff92b', // Warna kuning terang
@@ -19,7 +33,7 @@ export default {
         },
         neutral: {
           light: '#f3f4f6', // Warna abu-abu terang
-          dark: '#374151',  // Warna abu-abu gelap
+          dark: '#010001',  // Warna abu-abu gelap
         },
       },
     },

@@ -123,4 +123,5 @@
       </div>
     </div>
   </div>
+  <GetinTouch />
 </template>

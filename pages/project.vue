@@ -1,18 +1,18 @@
 <template>
-  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+  <div class="px-4 py-16 mx-auto md:px-24 lg:px-32 lg:py-20 bg-neutral-light dark:bg-neutral-dark text-gray-800 dark:text-white">
     <div class="flex flex-col items-center justify-between w-full mb-10 lg:flex-row">
-      <div class="mb-16 lg:mb-0 lg:max-w-lg lg:pr-5">
-        <div class="max-w-xl mb-6">
+      <div class="mb-16 lg:mb-0 lg:pr-5">
+        <div class=" mb-6">
           <div>
             <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
               new
             </p>
           </div>
-          <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+          <TextGradient>
             My
             List
-            <span class="inline-block text-deep-purple-accent-400">Project</span>
-          </h2>
+            Project
+          </TextGradient>
           <p class="text-base text-gray-700 md:text-lg">
             A Collection of My IT Accomplishments: Demonstrating My Skills and Expertise
           </p>
@@ -42,15 +42,16 @@
       </svg>
     </a>
   </div>
-  <div class="mx-auto max-w-7xl px-6 lg:px-8 pt-8">
-    <div class="mx-auto max-w-2xl text-center">
-        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Projects that i've done</h2>
+  <HighLight />
+  <div class="mx-auto px-6 lg:px-32 pt-8 bg-neutral-light dark:bg-neutral-dark text-gray-800 dark:text-white">
+    <div class="mx-auto text-center">
+        <TextGradient>Projects that i've done</TextGradient>
         <p class="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-300">
-            Here are some of the projects I've worked on.
+          Take a look at some of the projects I've crafted, highlighting my skills, creativity, and commitment to quality.
         </p>
     </div>
-    <div class="mx-auto mt-8 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-12 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
-        <!-- First blog post -->
+    <div class="mx-auto mt-8 grid auto-rows-fr grid-cols-1 gap-8 sm:mt-12 lg:mx-0 lg:grid-cols-3 ">
+        <!-- First project post -->
         <article
             class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 dark:bg-gray-700 px-8 py-8 pb-8 pt-80 sm:pt-48 lg:pt-80">
             <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw1fHxhaXxlbnwwfDB8fHwxNzEyNzUzMTQ4fDA&ixlib=rb-4.0.3&q=80&w=1080" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">

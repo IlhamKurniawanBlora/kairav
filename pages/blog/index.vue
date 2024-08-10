@@ -6,20 +6,20 @@
 // )
 </script>
 <template>
-<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+<div class="px-4 py-16 mx-auto md:px-24 lg:px-32 lg:py-20 bg-neutral-light dark:bg-neutral-dark text-gray-800 dark:text-white">
       <div class="grid gap-10 lg:grid-cols-2">
-        <div class="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
+        <div class="flex flex-col justify-center md:pr-8 xl:pr-0 ">
           <div class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-teal-accent-400">
             <div class="flex lg:justify-start items-center justify-center mb-4 ">
             <img src="../../public/kairav.png" alt="Logo" class="h-10 mr-2" />
           </div>
           </div>
-          <div class="max-w-xl mb-6">
-            <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+          <div class=" mb-6">
+            <TextGradient>
               Coding, <br class="hidden md:block" />
               Coffee,
               <span class="inline-block text-deep-purple-accent-400">& Creativity</span>
-            </h2>
+            </TextGradient>
             <p class="text-base text-gray-700 md:text-lg">
               "Through this blog, I want to invite you to take a closer look at my creative process, the projects I'm working on, and the things that excite me."
             </p>
@@ -48,30 +48,29 @@
         </div>
       </div>
     </div>
-<div class="w-full dark:bg-gray-800">
+    <HighLight />
 
-<div class="mx-auto max-w-7xl px-6 lg:px-8 pt-8">
-    <div class="mx-auto max-w-2xl text-center">
-        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">From The Blog</h2>
+    <div class="mx-auto px-6 lg:px-32 pt-8 bg-neutral-light dark:bg-neutral-dark text-gray-800 dark:text-white">
+    <div class="mx-auto text-center">
+        <TextGradient>Blogs that i've Written</TextGradient>
         <p class="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-300">
-            Here are some of the Blog I've Written.
-        </p>
+          Dive into a selection of insightful articles and reflections I've penned, sharing my expertise and perspectives on various topics.        </p>
     </div>
-    <div class="mx-auto mt-8 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-12 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
-        <!-- First blog post -->
+    <div class="mx-auto mt-8 grid auto-rows-fr grid-cols-1 gap-8 sm:mt-12 lg:mx-0 lg:grid-cols-3 ">
+        <!-- First project post -->
         <article
             class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 dark:bg-gray-700 px-8 py-8 pb-8 pt-80 sm:pt-48 lg:pt-80">
             <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw1fHxhaXxlbnwwfDB8fHwxNzEyNzUzMTQ4fDA&ixlib=rb-4.0.3&q=80&w=1080" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
             <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
             <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
             <div class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300"><time
-                    datetime="2023-10-11" class="mr-8">Oct 11, 2023</time>
+                    datetime="2023-10-11" class="mr-8">2024</time>
                 <div class="-ml-4 flex items-center gap-x-4"><svg viewBox="0 0 2 2"
                         class="-ml-0.5 h-0.5 w-0.5 flex-none fill-white/50">
                         <circle cx="1" cy="1" r="1"></circle>
                     </svg>
                     <div class="flex gap-x-2.5">
-                        <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="" class="h-6 w-6 flex-none rounded-full bg-white/10">John
+                        <img src="../../public/profile-blck.png" alt="" class="h-6 w-6 flex-none rounded-full bg-white/10">Kairav
                     </div>
                 </div>
             </div>
@@ -79,45 +78,30 @@
                 <a href="/tech-blog/post1"><span class="absolute inset-0"></span>The Future of Artificial
                     Intelligence: Trends and Challenges</a>
             </h3>
+            <div class="text-xs">
+              <button type="button" class="border border-gray-400 text-gray-400 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-900 focus:outline-none focus:shadow-outline">TRAILER</button>
+              
+              <button type="button" class="border border-gray-400 text-gray-400 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-900 focus:outline-none focus:shadow-outline">IMDB</button>
+              
+              <button type="button" class="border border-gray-400 text-gray-400 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-900 focus:outline-none focus:shadow-outline">AMAZON</button>
+            </div>
         </article>
-        <!-- <div>
-          <h1>Blog</h1>
-          <ul>
-            <li v-for="article in articles" :key="article._path">
-              <h2>
-                <NuxtLink :to="article._path">{{ article.title }}</NuxtLink>
-              </h2>
-              <p>{{ article.description }}</p>
-              <p>Oleh: {{ article.author }} pada {{ article.date }}</p>
-            </li>
-          </ul>
-        </div> -->
 
     </div>
 </div>
+  <!-- <div>
+    <h1>Blog</h1>
+    <ul>
+      <li v-for="article in articles" :key="article._path">
+        <h2>
+          <NuxtLink :to="article._path">{{ article.title }}</NuxtLink>
+        </h2>
+        <p>{{ article.description }}</p>
+        <p>Oleh: {{ article.author }} pada {{ article.date }}</p>
+      </li>
+    </ul>
+  </div> -->
 
-</div>
-  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-    <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-      <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
-        <span class="relative inline-block">
-          <svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
-            <defs>
-              <pattern id="4314d5df-c4ea-4854-be21-f1fdbb6fe951" x="0" y="0" width=".135" height=".30">
-                <circle cx="1" cy="1" r=".7"></circle>
-              </pattern>
-            </defs>
-            <rect fill="url(#4314d5df-c4ea-4854-be21-f1fdbb6fe951)" width="52" height="24"></rect>
-          </svg>
-          <span class="relative">The</span>
-        </span>
-        quick, brown fox jumps over a lazy dog
-      </h2>
-      <p class="text-base text-gray-700 md:text-lg">
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.
-      </p>
-    </div>
-  </div>
   <GetinTouch />
 </template>
 

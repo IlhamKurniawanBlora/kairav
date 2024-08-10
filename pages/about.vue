@@ -19,7 +19,7 @@
     <img src="../public/ilham-hero.png" alt="" class="relative object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
 </div>
         <!-- Teks -->
-        <div class="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left order-2 lg:order-1 z-10 text-neutral-dark dark:text-accent-dark">
+        <div class="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left order-2 lg:order-1 z-10 text-neutral-dark dark:text-neutral-light">
           <h2 class="text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">Introduction</h2>
       <p class="text-lg mb-2">ILHAM KURNIAWAN</p>
       <p class="text-base text-gray-400">Frontend | Backend | Junior Fullstack | Speaker | AI Enthusiast | Undergraduated Student</p>
@@ -45,13 +45,15 @@
     <div class="bg-neutral-light dark:bg-neutral-dark text-gray-800 mt-10 ">
     <div class="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-14 lg:flex-row lg:justify-between">
         <!-- Teks -->
-        <div class="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left order-2 lg:order-1 z-10 text-neutral-dark dark:text-accent-dark">
-          <h2 class="text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">ABOUT ME</h2>
-            <p class="mt-6 mb-8 text-lg sm:mb-12 text-justify">Hello there! I'm <span class="font-bold">Ilham Kurniawan</span>, a passionate coder and future Software Engineer from the vibrant city of Yogyakarta, Indonesia. Currently, I'm diving deep into the world of <span class="font-bold">Computer Science</span> and <span class="font-bold">Information Technology</span> at <span class="font-bold">Universitas Nahdlatul Ulama Yogyakarta</span>. I'm always eager to learn new things, eagerly absorbing everything tech.
+        <div class="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left order-2 lg:order-1 z-10 text-neutral-dark dark:text-neutral-light">
+          <h2 class="text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500 text-center">ABOUT ME</h2>
+          <p class="mt-6 mb-8 text-lg sm:mb-12 text-center">Hello there! I'm 
+              <HoverText>Ilham Kurniawan</HoverText>
+              , a passionate coder and future Software Engineer from the vibrant city of Yogyakarta, Indonesia. Currently, I'm diving deep into the world of <HoverText>Computer Science</HoverText> and <HoverText>Information Technology</HoverText> at <HoverText>Universitas Nahdlatul Ulama Yogyakarta</HoverText>. I'm always eager to learn new things, eagerly absorbing everything tech.
               <br class="mb-2">
-              Tech and coding are more than just interests for me; they're my way of life. When I'm not immersed in code, you'll find me exploring the artistic realms of design, crafting exciting game experiences, or delving into the intriguing world of artificial intelligence.
+              <HoverText>Tech</HoverText> and <HoverText>Coding</HoverText> are more than just interests for me; they're my way of life. When I'm not immersed in code, you'll find me exploring the artistic realms of design, crafting exciting game experiences, or delving into the intriguing world of artificial intelligence.
               <br class="mb-2">
-              In our ever-evolving digital age, I firmly believe that <span class="font-bold">continuous learning</span> is the key to staying ahead. So, <span class="font-boold">let’s connect</span> and journey together through this dynamic and thrilling tech landscape!
+              In our ever-evolving digital age, I firmly believe that <HoverText>continuous learning</HoverText> is the key to staying ahead. So, <HoverText>let’s connect</HoverText> and journey together through this dynamic and thrilling tech landscape!
             </p>
     
 
@@ -74,4 +76,5 @@
 <MyWork/>
 <MyQuotes />
 <GetinTouch />
+<ButtonSosmed />
 </template>

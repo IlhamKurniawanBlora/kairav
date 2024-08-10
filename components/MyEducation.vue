@@ -1,5 +1,5 @@
 <template>
-	<section class="bg-neutral-light dark:bg-neutral-dark text-gray-800">
+	<section class="bg-neutral-light dark:bg-neutral-dark text-gray-800 dark:text-white">
 		<div class="container max-w-5xl px-4 py-12 mx-auto">
 			<div class="grid gap-4 mx-4 sm:grid-cols-12">
 				<div class="col-span-12 sm:col-span-3">
@@ -13,8 +13,8 @@
 						<div class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-gradient-to-br from-yellow-400 to-orange-500" v-for="item in educationItems" :key="item.title">
 							<div class="flex items-center justify-between space-x-4 dark:text-gray-600">
 								<a rel="noopener noreferrer" href="#" class="inline-flex items-center px-3 py-1 my-1 space-x-2 text-sm border rounded-full group dark:border-gray-300">
-									<span aria-hidden="true" class="h-1.5 w-1.5 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500"></span>
-									<span class="group-hover:underline dark:text-gray-800">{{ item.type }}</span>
+									<span aria-hidden="true" class="h-1.5 w-1.5 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 shadow-pulse"></span>
+									<span class="">{{ item.type }}</span>
 								</a>
 							</div>
 							<h3 class="text-xl font-semibold tracking-wide">{{ item.title }}</h3>
@@ -61,4 +61,20 @@
     }
   };
   </script>
-  
+  <style>
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5);
+  }
+  50% {
+    opacity: 0.5;
+    box-shadow: 0 0 20px rgba(255, 165, 0, 1), 0 0 30px rgba(255, 165, 0, 1);
+  }
+}
+
+.shadow-pulse {
+  animation: pulse 2s infinite;
+}
+
+</style>

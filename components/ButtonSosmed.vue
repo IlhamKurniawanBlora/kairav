@@ -52,12 +52,12 @@
   {
     name: 'GitHub',
     component: 'IconSosmedGithub',
-    href: 'https://github.com/[username]' // Ganti dengan link GitHub Anda
+    href: 'https://github.com/IlhamKurniawanBlora' // Ganti dengan link GitHub Anda
   },
   {
     name: 'LinkedIn',
     component: 'IconSosmedLinkedin',
-    href: 'https://www.linkedin.com/in/[username]' // Ganti dengan link LinkedIn Anda
+    href: 'https://www.linkedin.com/in/ilham-kurniawan-9667891b7/' // Ganti dengan link LinkedIn Anda
   },
   {
     name: 'Discord',
@@ -67,7 +67,7 @@
   {
     name: 'Email',
     component: 'IconSosmedEmail',
-    href: 'mailto:youremail@example.com' // Ganti dengan alamat email Anda
+    href: 'mailto:ilhamkurniawanjateng@gmail.com' // Ganti dengan alamat email Anda
   }
 ]);
 

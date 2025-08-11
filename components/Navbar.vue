@@ -6,13 +6,19 @@
         <p class="text-xl font-semibold text-slate-800 dark:text-primary-dark px-4">KAIRAV <span>
           <DarkModeToggle />
         </span></p>
-
       </div>
       <!-- Menu Toggle Section -->
       <div class="flex items-center">
-        <FullScreenMenu/>
+        <div @click="playMenuSound">
+          <FullScreenMenu/>
+        </div>
       </div>
     </div>
+    
+    <!-- Audio element for sound effect -->
+    <audio ref="menuSoundEffect" preload="auto">
+      <source src="/public/sound-effect/menu-sound-effect.mp3" type="audio/mpeg">
+    </audio>
   </nav>
 </template>
 
@@ -32,9 +38,25 @@ export default {
     handleScroll() {
       this.isScrolled = window.scrollY > 50;
     },
+    playMenuSound() {
+      try {
+        // Reset audio to beginning and play
+        this.$refs.menuSoundEffect.currentTime = 0;
+        this.$refs.menuSoundEffect.play().catch(error => {
+          console.log('Audio play failed:', error);
+        });
+      } catch (error) {
+        console.log('Sound effect error:', error);
+      }
+    },
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll);
+    
+    // Preload audio for better performance
+    if (this.$refs.menuSoundEffect) {
+      this.$refs.menuSoundEffect.volume = 0.5; // Set volume to 50%
+    }
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll);
@@ -46,5 +68,10 @@ export default {
 nav {
   top: 0;
   z-index: 50;
+}
+
+/* Add hover effect for better UX */
+.flex.items-center div:hover {
+  cursor: pointer;
 }
 </style>

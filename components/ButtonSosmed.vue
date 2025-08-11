@@ -8,8 +8,10 @@
       v-for="(sosmedItem, index) in sosmedItems" 
       :key="index"
       class="group relative flex items-center justify-center w-12 h-12 mb-2 cursor-pointer
-        group-hover:opacity-100 transform group-hover:scale-125">
-      <NuxtLink :to="sosmedItem.href">
+        group-hover:opacity-100 transform group-hover:scale-125"
+      @mouseenter="playHoverSound"
+    >
+      <NuxtLink :to="sosmedItem.href" @click="playClickSound">
         <button class="bg-gray-300 focus:outline-none rounded-full">
           <span class="absolute border-2 inset-0 rounded-full bg-yellow-400 opacity-50 group-hover:opacity-100 transition duration-300 transform group-hover:scale-125 flex items-center justify-center">
             <component :is="componentsMap[sosmedItem.component]" class="h-6 w-6 transform transition-transform duration-300 group-hover:scale-125 group-hover:text-slate-800" />
@@ -22,30 +24,33 @@
     </div>
   </div>
 </template>
+
 <script lang="ts" setup>
-  import IconSosmedInstagram from "~~/components/Icon/Sosmed/Instagram.vue";
-  import IconSosmedGithub from "~~/components/Icon/Sosmed/Github.vue";
-  import IconSosmedLinkedin from "~~/components/Icon/Sosmed/Linkedin.vue";
-  import IconSosmedDiscord from "~~/components/Icon/Sosmed/Discord.vue";
-  import IconSosmedWhatsApp from "~~/components/Icon/Sosmed/WhatsApp.vue";
-  import IconSosmedEmail from "~~/components/Icon/Sosmed/Email.vue";
-  
-  const componentsMap = {
-	IconSosmedInstagram,
-	IconSosmedGithub,
-	IconSosmedLinkedin,
-	IconSosmedDiscord,
-	IconSosmedEmail,
+import { ref, onMounted } from 'vue'
+import IconSosmedInstagram from "~~/components/Icon/Sosmed/Instagram.vue";
+import IconSosmedGithub from "~~/components/Icon/Sosmed/Github.vue";
+import IconSosmedLinkedin from "~~/components/Icon/Sosmed/Linkedin.vue";
+import IconSosmedDiscord from "~~/components/Icon/Sosmed/Discord.vue";
+import IconSosmedWhatsApp from "~~/components/Icon/Sosmed/WhatsApp.vue";
+import IconSosmedEmail from "~~/components/Icon/Sosmed/Email.vue";
+
+const componentsMap = {
+  IconSosmedInstagram,
+  IconSosmedGithub,
+  IconSosmedLinkedin,
+  IconSosmedDiscord,
+  IconSosmedEmail,
   IconSosmedWhatsApp
 };
 
-  interface SosmedItems {
-    name: string;
-    component: string;
-    hover: string;
-    href: string;
-  }
-  const sosmedItems = ref<SosmedItems[]>([
+interface SosmedItems {
+  name: string;
+  component: string;
+  hover: string;
+  href: string;
+}
+
+const sosmedItems = ref<SosmedItems[]>([
   {
     name: 'Instagram',
     component: 'IconSosmedInstagram',
@@ -73,4 +78,59 @@
   }
 ]);
 
+// Audio references
+const hoverAudio = ref<HTMLAudioElement | null>(null)
+const clickAudio = ref<HTMLAudioElement | null>(null)
+
+// Initialize audio objects
+onMounted(() => {
+  if (process.client) {
+    try {
+      hoverAudio.value = new Audio('/sound-effect/hover-sound-effect.mp3')
+      clickAudio.value = new Audio('/sound-effect/click-sound-effect.mp3')
+      
+      // Set volume (optional)
+      if (hoverAudio.value) {
+        hoverAudio.value.volume = 0.2 // Lebih pelan untuk hover
+        hoverAudio.value.preload = 'auto'
+      }
+      if (clickAudio.value) {
+        clickAudio.value.volume = 0.4 // Volume sedang untuk click
+        clickAudio.value.preload = 'auto'
+      }
+    } catch (error) {
+      console.warn('Audio files could not be loaded:', error)
+    }
+  }
+})
+
+// Play hover sound
+const playHoverSound = () => {
+  if (process.client && hoverAudio.value) {
+    try {
+      hoverAudio.value.currentTime = 0 // Reset to start
+      hoverAudio.value.play().catch(() => {
+        // Handle autoplay policy restrictions
+        console.log('Audio autoplay prevented')
+      })
+    } catch (error) {
+      console.warn('Could not play hover sound:', error)
+    }
+  }
+}
+
+// Play click sound
+const playClickSound = () => {
+  if (process.client && clickAudio.value) {
+    try {
+      clickAudio.value.currentTime = 0 // Reset to start
+      clickAudio.value.play().catch(() => {
+        // Handle autoplay policy restrictions
+        console.log('Audio autoplay prevented')
+      })
+    } catch (error) {
+      console.warn('Could not play click sound:', error)
+    }
+  }
+}
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <MenuTab />
+  <!-- <MenuTab /> -->
 
   <div class="min-h-screen bg-neutral-light dark:bg-neutral-dark text-white dark:text-black flex flex-wrap justify-center items-center w-full ">
     <!-- Hero div -->
@@ -76,5 +76,4 @@
 <MyWork/>
 <MyQuotes />
 <GetinTouch />
-<ButtonSosmed />
 </template>

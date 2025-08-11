@@ -27,6 +27,7 @@
   import IconSosmedGithub from "~~/components/Icon/Sosmed/Github.vue";
   import IconSosmedLinkedin from "~~/components/Icon/Sosmed/Linkedin.vue";
   import IconSosmedDiscord from "~~/components/Icon/Sosmed/Discord.vue";
+  import IconSosmedWhatsApp from "~~/components/Icon/Sosmed/WhatsApp.vue";
   import IconSosmedEmail from "~~/components/Icon/Sosmed/Email.vue";
   
   const componentsMap = {
@@ -34,7 +35,8 @@
 	IconSosmedGithub,
 	IconSosmedLinkedin,
 	IconSosmedDiscord,
-	IconSosmedEmail
+	IconSosmedEmail,
+  IconSosmedWhatsApp
 };
 
   interface SosmedItems {
@@ -47,7 +49,7 @@
   {
     name: 'Instagram',
     component: 'IconSosmedInstagram',
-    href: 'https://www.instagram.com/kairav_/' // Ganti dengan link Instagram Anda
+    href: 'https://www.instagram.com/ilhamkrnwan__' // Ganti dengan link Instagram Anda
   },
   {
     name: 'GitHub',
@@ -60,9 +62,9 @@
     href: 'https://www.linkedin.com/in/ilham-kurniawan-9667891b7/' // Ganti dengan link LinkedIn Anda
   },
   {
-    name: 'Discord',
-    component: 'IconSosmedDiscord',
-    href: 'https://discord.gg/[invitecode]' // Ganti dengan link Discord Anda (jika ada)
+    name: 'WhatsApp',
+    component: 'IconSosmedWhatsApp',
+    href: 'https://wa.me/6287761296676?text=Hello%20friend%2C%20how%20can%20I%20help%20you%20today%3F%20😊'
   },
   {
     name: 'Email',

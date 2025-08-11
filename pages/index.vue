@@ -1,5 +1,4 @@
 <template>
-  <MenuTab />
 
   <div class="min-h-screen bg-neutral-light dark:bg-neutral-dark text-neutral-dark dark:text-neutral-light flex flex-wrap justify-center items-center w-full ">
     <!-- Hero div -->
@@ -50,72 +49,5 @@
     </div>
     </div>
 
-  <section class="relative flex flex-col md:flex-row items-center justify-center min-h-screen" v-for="(indexContent, index) in indexContent" :key="index">
-  <!-- Image Div -->
-  <div class="absolute inset-0 w-full h-full overflow-hidden md:relative md:w-1/2 md:h-auto" :id="indexContent.id">
-    <img src="../public/ilham02.jpg" alt="About Image" class="object-cover w-full h-full xl:min-h-screen lg:min-h-screen xl:overflow-hidden lg:overflow-hidden">
-  </div>
-  <!-- Content Div -->
-  <div :class="indexContent.class">
-    <div class="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left order-2 lg:order-1 z-10 text-neutral-dark dark:text-accent-dark items-center">
-      <TextGradient class="py-2">{{ indexContent.name }}</TextGradient>
-      <Strip />
-      <p class="mt-6 mb-8 text-lg sm:mb-12">{{ indexContent.description }}</p>
-    <div class="flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row space-y-2 sm:space-y-2 md:space-y-2 lg:space-y-0 lg:space-x-2">
-      <StyleButton>
-        <a :href="indexContent.route">Learn More</a>
-      </StyleButton>
-    </div>
-
-  </div>
-  </div>
-  </section>
-
   </div>
 </template>
-<script lang="ts" setup>
-interface IndexContent {
-    name: string;
-    description: string;
-    route: string;
-    class: string;
-    id: string;
-    img: string;
-  }
-  const indexContent = ref<IndexContent[]>([
-    {
-      name: 'Project',
-      description: '"Transforming Ideas into Reality Through Cutting-Edge Technology and Creativity"',
-      route: '/#project',
-      class: 'relative z-10 w-full p-6 md:w-1/2 md:p-12 bg-transparent',
-      id: 'project',
-      img: '@nuxt/public/ilham02.jpg',
-    },
-    {
-      name: 'Blog',
-      description: '"Exploring the World of Code, Learning New Skills, and One Insightful Post at a Time"',
-      route: '/#blog',
-      class: 'relative z-10 w-full p-6 md:w-1/2 md:p-12 md:bg-neutral-light md:dark:bg-neutral-dark sm:bg-neutral-light sm:dark:bg-neutral-dark',
-      id: 'blog',
-      img: '@nuxt/public/ilham02.jpg',
-    },
-    {
-      name: 'Gallery',
-      description: '"Exploring Our Journey Through Captivating Images"',
-      route: '/#gallery',
-      class: 'relative z-10 w-full p-6 md:w-1/2 md:p-12 bg-transparent',
-      id: 'gallery',
-      img: '@nuxt/public/ilham02.jpg',
-    },
-    {
-      name: 'About',
-      description: 'Let me tell you a bit about myself and the things that spark my curiosity.',
-      route: '/#about',
-      class: 'relative z-10 w-full p-6 md:w-1/2 md:p-12 md:bg-neutral-light md:dark:bg-neutral-dark sm:bg-neutral-light sm:dark:bg-neutral-dark',
-      id: 'about',
-      img: '@nuxt/public/ilham02.jpg',
-    },
-    // Tambahkan item menu lain jika diperlukan
-    
-  ]);
-</script>
